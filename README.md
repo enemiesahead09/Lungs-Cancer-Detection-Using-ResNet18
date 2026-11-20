@@ -70,12 +70,3 @@ Lungs Disease Detection/
 ```
 
 ---
-
-## 👨‍🏫 Viva Q&A Quick Reference
-
-- **Q: Why use Transfer Learning?**
-  *A:* Pre-trained weights from ImageNet give the convolutional layers strong feature extraction capabilities for edges, gradients, and textures, which prevents overfitting and accelerates convergence on medical imaging datasets.
-- **Q: What does Grad-CAM do?**
-  *A:* It calculates the gradients of the target class score with respect to the final convolutional feature maps, highlighting the spatial regions of the CT scan that contributed most to the prediction.
-- **Q: How are Benign and Malignant nodules differentiated on CT?**
-  *A:* Benign nodules typically display circumscribed, smooth borders and stable attenuation, whereas malignant lesions feature spiculated/lobulated margins, infiltrative growth, and architectural distortion.
