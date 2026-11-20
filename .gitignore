@@ -6,8 +6,15 @@ __pycache__/
 # Large Dataset (contains 14,800+ raw CT scans, ~920MB; excluded to keep repo lightweight)
 TheLungCancerDataset/
 
-# Presentation files
+# Presentation & academic submission files with personal credentials
 *.pptx
+generate_ppt.py
+generate_simple_ppt.py
+README_PRESENTATION.md
+PROJECT_REPORT_*.md
+PulmoScan_AI_Project_Report_*
+*.pdf
+*.html
 
 # Virtual Environments
 venv/

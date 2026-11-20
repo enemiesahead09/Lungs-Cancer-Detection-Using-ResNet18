@@ -4,10 +4,21 @@ An end-to-end Deep Learning system with **Explainable AI (Grad-CAM)** for automa
 
 ---
 
+## 📊 Dataset
+
+The model is trained and evaluated on the **IQ-OTH/NCCD Lung Cancer Dataset** comprising **14,819 axial thoracic CT scan slices** categorized into three classes:
+- **Malignant Cases**: 5,640 scans (Invasive malignant neoplasms, irregular borders, spiculation)
+- **Benign Cases**: 5,019 scans (Circumscribed nodules, smooth margins, non-invasive granulomas)
+- **Normal Cases**: 4,160 scans (Clear lung parenchyma without pathological lesions)
+
+🔗 **Kaggle Dataset Link:** [https://www.kaggle.com/datasets/sangemjayaprakash/lung-cancer-14k](https://www.kaggle.com/datasets/sangemjayaprakash/lung-cancer-14k)
+
+---
+
 ## 🚀 How to Run the Web Application
 
-### Method 1: One-Click Launcher (Easiest)
-Simply double-click the **`start_ui.bat`** file in this folder. It will automatically activate your environment and launch the UI in your default web browser at **`http://localhost:8501`**.
+### Method 1: One-Click Launcher (Windows)
+Double-click the **`start_ui.bat`** file in this folder. It will activate the conda environment and launch the UI at **`http://localhost:8501`**.
 
 ### Method 2: Via Terminal / PowerShell
 Open your terminal in this project directory and run:
@@ -18,10 +29,10 @@ streamlit run app.py
 
 ---
 
-## 🌟 Key Features for Your Class Presentation
+## 🌟 Key Features
 
 1. **🔬 Interactive Diagnostic Scanner**:
-   - **Quick Demo Scans (1-Click)**: Instant test buttons for *Normal*, *Benign*, and *Malignant* cases—no need to search for files during your live presentation!
+   - **Quick Demo Scans (1-Click)**: Instant test buttons for *Normal*, *Benign*, and *Malignant* cases for instantaneous testing.
    - **Custom Upload**: Drag and drop any `.jpg` or `.png` thoracic CT scan.
    - **Multi-Class Confidence Scores**: Real-time probabilities for all 3 classes (*Normal*, *Benign Nodule*, *Malignant Neoplasm*).
 
@@ -41,12 +52,10 @@ streamlit run app.py
    - Deep Residual CNN (ResNet-18) transfer learning pipeline.
    - Confusion matrix, training/validation loss & accuracy dynamics, precision, recall, and F1-score.
 
-6. **🎓 Built-In Presentation Guide & Viva Q&A**:
-   - A dedicated tab with a ready-to-use 5-minute speaking script and the top professor questions with answers.
-
 ---
 
 ## 📁 Project Directory Structure
+
 ```
 Lungs Disease Detection/
 │
@@ -54,19 +63,30 @@ Lungs Disease Detection/
 ├── gradcam.py                  # PyTorch Grad-CAM explainable AI engine
 ├── train_classifier.py         # Deep learning training script
 ├── start_ui.bat                # 1-click Windows launcher
+├── requirements.txt            # Python dependencies
 ├── sample_scans/               # Pre-staged high-res test scans for live demo
 │   ├── Normal_Case_Sample1.jpg
 │   ├── Benign_Case_Sample1.jpg
 │   └── Malignant_Case_Sample1.jpg
 ├── models/
-│   ├── lung_cancer_resnet18.pth # Trained model weights
+│   ├── lung_cancer_resnet18.pth # Trained ResNet-18 model weights
 │   ├── metrics.json             # Test set accuracy & performance metrics
 │   └── confusion_matrix.png     # Evaluation confusion matrix plot
-├── TheLungCancerDataset/       # Original dataset (14,819 CT scans)
-│   ├── Bengin cases/           # 5,019 scans
-│   ├── Malignant cases/        # 5,640 scans
-│   └── Normal cases/           # 4,160 scans
-└── lung-cancer-cnn-classifier-main/ # Original project repository files
+└── lung-cancer-cnn-classifier-main/ # Reference baseline models & notebooks
 ```
 
 ---
+
+## 🔬 Model Performance & Results
+
+- **Validation Accuracy (Peak)**: 91.90%
+- **Test Accuracy**: 88.10%
+- **Malignant Recall (Sensitivity)**: 100.0% (Zero false negatives)
+- **Benign Precision**: 98.00%
+- **Macro F1-Score**: 87.79%
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](lung-cancer-cnn-classifier-main/LICENSE).
